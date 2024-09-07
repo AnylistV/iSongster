@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(to top, #e7de5a, #64b47e);
+}
+
+.container {
+    position: relative;
+    width: 550px;
+    height: 600px;
+}
+
+.singer {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.singer:hover {
+    transform: scale(1.2);
+    z-index: 10;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.singer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.singer:hover::before {
+    opacity: 1;
+}
+
+.singer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.singer:hover img {
+    transform: scale(1.1);
+}
+
+
+.info-card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.info-card h2 {
+    margin-top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.singer.selected {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Import the Roboto Mono font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
+
+/* Set the font family for the entire document (html and body) */
+html,
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #212121;
+    /* Background color set to dark gray */
+    height: 100vh;
+    /* Height set to 100% of viewport height */
+}
+
+/* Style the container element */
+.container_1 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* Set display to flex for row-based layout */
+    justify-content: center;
+    /* Horizontally center the content within the container */
+    align-items: center;
+    /* Vertically center the content within the container */
+}
+
+/* Style the text element */
+.text {
+    font-weight: 100;
+    /* Set font weight to light */
+    font-size: 28px;
+    /* Set font size to 28px */
+    background: -webkit-linear-gradient(left, #00ff7f, #fffb00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Text color set to white */
+    position: absolute;
+    /* Positioning the text absolutely */
+    top: 50%;
+    /* Positioning it halfway from the top */
+    left: 50%;
+    /* Positioning it halfway from the left */
+    transform: translate(-50%, -50%);
+    /* Adjust for the text width and height */
+}
+
+
+/* Style the dud element */
+.dud {
+    color: #757575;
+    /* Text color set to a lighter gray */
+}
+
+#whatsapp-button {
+    background-image: linear-gradient(to top, #bf36cc, #64b47e);
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Espaço entre o ícone e o texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    /* Posiciona o botão de forma fixa na tela */
+    bottom: 20px;
+    /* Distância da borda inferior da tela */
+    right: 20px;
+    /* Distância da borda direita da tela */
+}
+
+
+
+
+#whatsapp-button {
+    background-color: #25D366;
+    animation: pulse 2s infinite;
+    border-radius: 50%;
+
+}
+
+#chat-button:hover,
+#whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+    }
+
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+#chat-button {
+    animation: pulse 2s infinite;
+}
+
+#chat-button:hover {
+    animation: none;
+}
+
+#whatsapp-button:hover {
+    background-color: #1EBE58;
+    animation: none;
+}
+
+#whatsapp-button i {
+    font-size: 20px;
+}
+.navbar {
+    background-color: rgba(33, 33, 33, 0.9);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    color: #00ff7f;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.navbar-link {
+    color: rgb(238, 221, 67);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #00ff7f;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(33, 33, 33, 0.9);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.navbar-item:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: rgb(228, 108, 228);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #00ff7f;
+    color: #212121;
+}
+
+/* Ajuste para o conteúdo principal */
+main {
+    padding-top: 80px; /* Ajuste conforme a altura da sua navbar */
+}
+.artist {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .artist img {
+    max-width: 100%;
+    height: auto;
+  }
+.footer-content{
+    
+    color: rgb(2, 15, 22);
+    text-align: center;
+    padding: 40px 0;
+    position: relative; /* Isso vai garantir que o footer não se sobreponha ao conteúdo */
+    width: 100%;
+}
+.footer-link {
+    color: #010411;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: #64b47e;
+}

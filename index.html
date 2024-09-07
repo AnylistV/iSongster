@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conheça Músicas e Cantores</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">iSongster</a>
+      <ul class="navbar-menu">
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Início</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#" class="navbar-link">Descubra+ <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="artistas.html" >Artistas</a>
+            <a href="music.html" >Músicas</a>
+          </div>
+        </li>
+        <li class="navbar-item">
+          <a href="login.html" class="navbar-link">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container_1">
+      <div class="text"></div>
+    </div>
+    <div class="container">
+      <div class="singer" style="top: 0; left: 50%; transform: translate(-50%, -50%);"
+        onclick="selectIcon(this);showInfo('cantor1')">
+        <img src="img/alcione.png" alt="Cantor 1">
+      </div>
+      <div class="singer" style="top: 5.8%; right: 20.6%; transform: translate(50%, -50%);"
+        onclick="selectIcon(this);showInfo('cantor2')">
+        <img src="img/johnny.png" alt="Cantor 2">
+      </div>
+      <div class="singer" style="top: 25%; right: 0; transform: translate(50%, -50%);"
+        onclick="selectIcon(this);showInfo('cantor3')">
+        <img src="img/gonzaga.png" alt="Cantor 3">
+      </div>
+      <div class="singer" style="bottom: 25%; right: 0; transform: translate(50%, 50%);"
+        onclick="selectIcon(this);showInfo('cantor4')">
+        <img src="img/floyd.png" alt="Cantor 4">
+      </div>
+      <div class="singer" style="bottom: 5.8%; right: 20.6%; transform: translate(50%, 50%);"
+        onclick="selectIcon(this);showInfo('cantor5')">
+        <img src="img/alok.png" alt="Cantor 5">
+      </div>
+      <div class="singer" style="bottom: 0; left: 50%; transform: translate(-50%, 50%);"
+        onclick="selectIcon(this);showInfo('cantor6')">
+        <img src="img/beethoven.png" alt="Cantor 6">
+      </div>
+      <div class="singer" style="bottom: 5.8%; left: 20.6%; transform: translate(-50%, 50%);"
+        onclick="selectIcon(this);showInfo('cantor7')">
+        <img src="img/bob_marley.png" alt="Cantor 7">
+      </div>
+      <div class="singer" style="bottom: 25%; left: 0; transform: translate(-50%, 50%);"
+        onclick="selectIcon(this);showInfo('cantor8')">
+        <img src="img/eminem.png" alt="Cantor 8">
+      </div>
+      <div class="singer" style="top: 25%; left: 0; transform: translate(-50%, -50%);"
+        onclick="selectIcon(this);showInfo('cantor9')">
+        <img src="img/frank_sinatra.png" alt="Cantor 9">
+      </div>
+      <div class="singer" style="top: 5.8%; left: 20.6%; transform: translate(-50%, -50%);"
+        onclick="selectIcon(this);showInfo('cantor10')">
+        <img src="img/prince.png" alt="Cantor 10">
+      </div>
+    </div>
+
+    <div id="infoCard" class="info-card">
+      <span class="close-btn" onclick="closeInfo()">×</span>
+      <h2 id="singerName"></h2>
+      <p id="singerInfo"></p>
+      <a id="singerLink" href="#"  style="color: rgb(102, 194, 65);"> Ouça a música</a>
+    </div>
+    <div class="footer-content">
+      <p>© 2024 iSongster. Todos os direitos reservados.</p>
+      <a href="politica.html"  class="footer-link">Política de Privacidade</a>
+    </div>
+  </main>
+
+
+
+  <script src="js/javascript.js"></script>
+
+
+  <footer>
+    <!-- Botão de WhatsApp -->
+    <button id="whatsapp-button" onclick="openWhatsApp()">
+      <i class="fab fa-whatsapp"></i>
+    </button>
+    </div>
+
+
+
+  </footer>
+  <footer></footer>
+
+
+</body>
+
+</html>

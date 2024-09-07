@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Multiplayer</title>
+    <link rel="stylesheet" href="css/music.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">iSongster</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Início</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="player-container">
+        <h1>Music Player</h1>
+        <div class="player-controls">
+            <button id="prevBtn">⏮</button>
+            <button id="playBtn">▶</button>
+            <button id="nextBtn">⏭</button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="song-info">
+            <h2 id="songTitle">Título da Música</h2>
+            <p id="artistName">Nome do Artista</p>
+        </div>
+        <ul class="playlist" id="playlist">
+            <!-- As músicas serão adicionadas aqui via JavaScript -->
+        </ul>
+    </div>
+
+    <script src="js/music.js"></script>
+
+    </script>
+</body>
+
+</html>
